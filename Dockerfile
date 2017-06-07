@@ -22,7 +22,9 @@ RUN apt-get update && \
 			libtbb-dev \
 			pkg-config \
 			python-dev \
-			python-numpy && \
+			python-numpy
+			python-pandas && \
+    pip install root_numpy && \
     apt-get autoremove -y & apt-get clean -y & \
     mkdir -p /tmp/build && cd /tmp/ && \
     git clone https://github.com/Itseez/opencv source && cd source && \
