@@ -23,6 +23,7 @@ RUN apt-get update && \
 			pkg-config \
 			python-dev \
 			python-numpy \
+			python-pip \
 			python-pandas && \
     pip install root_numpy && \
     apt-get autoremove -y & apt-get clean -y & \
