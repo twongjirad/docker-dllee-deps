@@ -1,6 +1,5 @@
-FROM ubuntu:16.10
-
-FROM twongjirad/cern-root6-yakkety:6.08.06
+FROM ubuntu:14.04
+FROM twongjirad/docker-ubuntu14.04-root-6.04.18:latest
 
 MAINTAINER taritree.wongjirad@tufts.edu
 
@@ -28,8 +27,8 @@ RUN apt-get update && \
     pip install root_numpy && \
     apt-get autoremove -y & apt-get clean -y & \
     mkdir -p /tmp/build && cd /tmp/ && \
-    git clone https://github.com/Itseez/opencv source && cd source && \
-    git checkout 3.2.0 && cd /tmp/build && \
+    git clone https://github.com/opencv/opencv source && cd source && \
+    git checkout 3.1.0 && cd /tmp/build && \
     cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local /tmp/source && \
     make -j4 && make install -j4 && \
     rm -r /tmp/build && rm -r /tmp/source && \
