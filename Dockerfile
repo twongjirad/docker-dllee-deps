@@ -31,7 +31,7 @@ RUN apt-get update && \
 # BUILD OPENCV
 RUN mkdir -p /tmp/build && cd /tmp/ && \
     git clone https://github.com/Itseez/opencv source && cd source && \
-    git checkout 3.2.0 && cd /tmp/build && \
+    git checkout 3.1.0 && cd /tmp/build && \
     cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local /tmp/source && \
     make -j4 && make install -j4 && \
     rm -r /tmp/build && rm -r /tmp/source && \
