@@ -34,5 +34,4 @@ RUN mkdir -p /tmp/build && cd /tmp/ && \
     git checkout 3.1.0 && cd /tmp/build && \
     cmake -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DENABLE_PRECOMPILED_HEADERS=OFF /tmp/source && \
     make -j4 && make install -j4 && \
-    rm -r /tmp/build && rm -r /tmp/source && \
-    apt-get autoremove -y && apt-get clean -y
+    rm -r /tmp/build && rm -r /tmp/source
