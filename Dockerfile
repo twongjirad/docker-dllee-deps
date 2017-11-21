@@ -1,4 +1,4 @@
-FROM twongjirad/cern-root6-yakkety:6.08.06
+FROM twongjirad/cern-root6-yakkety:6.08.06wemacs
 
 MAINTAINER taritree.wongjirad@tufts.edu
 
@@ -7,6 +7,7 @@ RUN apt-get update && \
     apt-get install -y build-essential \
 	    	    	cmake \
 			git \
+			emacs \
 			libavcodec-dev \
 			libavformat-dev \
 			libdc1394-22-dev \
